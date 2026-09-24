@@ -1,0 +1,29 @@
+/*
+  ISHWARI design tokens.
+  This file is the shared design system: colors, type, spacing scale.
+  It has no component styles in it, so it can be dropped into any other
+  ISHWARI/Breathing Point property (e.g. the main ishwariyogainstitute.in
+  React site) to keep both properties visually consistent — just import
+  this file before your own component styles.
+*/
+:root {
+  /* Color */
+  --ink: #26311D;
+  --ink-soft: #5C6B54;
+  --paper: #FBF8F6;
+  --panel: #FFFFFF;
+  --line: #E5DFD1;
+  --gold: #C08A3E;
+  --gold-deep: #9C6D2A;
+  --green: #3F5820;
+  --green-deep: #2E4118;
+  --rust: #A3432B;
+
+  /* Type */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Poppins', sans-serif;
+
+  /* Radius / spacing primitives used across components */
+  --radius: 2px;
+  --wrap-max: 1080px;
+}
