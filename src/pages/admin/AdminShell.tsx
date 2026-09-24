@@ -11,7 +11,7 @@ import AdminExport from './AdminExport';
 
 function NavBtn({ to, children }: { to: string; children: React.ReactNode }) {
   return (
-    <NavLink to={to} className={({ isActive }) => (isActive ? 'active' : '')}>
+    <NavLink to={to} end className={({ isActive }) => (isActive ? 'active' : '')}>
       {children}
     </NavLink>
   );
@@ -24,18 +24,18 @@ export default function AdminShell() {
       <div className="shell">
         <div className="nav">
           <div className="navlabel">ADMIN</div>
-          <NavBtn to="courses">Courses</NavBtn>
-          <NavBtn to="students">Registrations</NavBtn>
-          <NavBtn to="enrollments">Enrollments &amp; status</NavBtn>
-          <NavBtn to="reports">Reports</NavBtn>
-          <NavBtn to="results">Results &amp; certificates</NavBtn>
-          <NavBtn to="settings">Email settings</NavBtn>
-          <NavBtn to="export">Export data</NavBtn>
+          <NavBtn to="/admin/courses">Courses</NavBtn>
+          <NavBtn to="/admin/students">Registrations</NavBtn>
+          <NavBtn to="/admin/enrollments">Enrollments &amp; status</NavBtn>
+          <NavBtn to="/admin/reports">Reports</NavBtn>
+          <NavBtn to="/admin/results">Results &amp; certificates</NavBtn>
+          <NavBtn to="/admin/settings">Email settings</NavBtn>
+          <NavBtn to="/admin/export">Export data</NavBtn>
         </div>
         <div className="main">
           <PortalFlash />
           <Routes>
-            <Route index element={<Navigate to="courses" replace />} />
+            <Route index element={<Navigate to="/admin/courses" replace />} />
             <Route path="courses" element={<AdminCourses />} />
             <Route path="students" element={<AdminStudents />} />
             <Route path="enrollments" element={<AdminEnrollments />} />

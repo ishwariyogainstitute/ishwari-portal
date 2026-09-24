@@ -97,9 +97,9 @@ legend{font-family:var(--font-serif);font-size:17px;font-weight:600;color:var(--
 .shell{display:flex;max-width:var(--wrap-max);margin:0 auto;min-height:calc(100vh - 74px);}
 .nav{width:200px;flex:none;border-right:1px solid var(--line);padding:26px 18px;}
 .nav .navlabel{font-size:11px;color:var(--ink-soft);margin-bottom:12px;letter-spacing:.3px;line-height:1.5;}
-.nav button{display:block;width:100%;text-align:left;background:none;border:none;padding:9px 8px;font-size:13.5px;color:var(--ink-soft);border-radius:2px;margin-bottom:2px;}
-.nav button:hover{background:#F0EEE4;color:var(--ink);}
-.nav button.active{background:var(--green-deep);color:#fff;}
+.nav a{display:block;width:100%;text-align:left;background:none;border:none;padding:9px 8px;font-size:13.5px;color:var(--ink-soft);border-radius:2px;margin-bottom:2px;text-decoration:none;cursor:pointer;}
+.nav a:hover{background:#F0EEE4;color:var(--ink);}
+.nav a.active{background:var(--green-deep);color:#fff;}
 .main{flex:1;padding:30px 32px;min-width:0;}
 
 table{width:100%;border-collapse:collapse;}

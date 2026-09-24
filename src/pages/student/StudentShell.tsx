@@ -8,7 +8,7 @@ import StudentResults from './StudentResults';
 
 function NavBtn({ to, children }: { to: string; children: React.ReactNode }) {
   return (
-    <NavLink to={to} className={({ isActive }) => (isActive ? 'active' : '')}>
+    <NavLink to={to} end className={({ isActive }) => (isActive ? 'active' : '')}>
       {children}
     </NavLink>
   );
@@ -28,14 +28,14 @@ export default function StudentShell() {
             <br />
             <span style={{ opacity: 0.7 }}>{currentStudent.id}</span>
           </div>
-          <NavBtn to="enroll">Enroll in a course</NavBtn>
-          <NavBtn to="enrollments">My enrollments</NavBtn>
-          <NavBtn to="results">Results &amp; certificates</NavBtn>
+          <NavBtn to="/portal/enroll">Enroll in a course</NavBtn>
+          <NavBtn to="/portal/enrollments">My enrollments</NavBtn>
+          <NavBtn to="/portal/results">Results &amp; certificates</NavBtn>
         </div>
         <div className="main">
           <PortalFlash />
           <Routes>
-            <Route index element={<Navigate to="enroll" replace />} />
+            <Route index element={<Navigate to="/portal/enroll" replace />} />
             <Route path="enroll" element={<StudentEnroll />} />
             <Route path="enrollments" element={<StudentEnrollments />} />
             <Route path="results" element={<StudentResults />} />
