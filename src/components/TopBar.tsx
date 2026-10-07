@@ -8,10 +8,15 @@ export default function TopBar({ showLogout = false }: { showLogout?: boolean })
   const navigate = useNavigate();
   const portal = usePortal();
 
+  const handleLogoClick = () => {
+    // Navigate to main website home page at the root domain
+    window.location.href = 'https://ishwariyogainstitute.in/';
+  };
+
   return (
     <div className="topbar">
       <div className="topbar-inner">
-        <div className="brand" onClick={() => navigate('/')}>
+        <div className="brand" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
           <img src={ishwariLogo} alt="ISHWARI — The Institute for Conscious Living" />
           <div className="brand-divider" />
           <div className="brand-sub">
@@ -20,6 +25,9 @@ export default function TopBar({ showLogout = false }: { showLogout?: boolean })
           </div>
         </div>
         <div className="topbar-actions">
+          <button className="btn secondary small" onClick={handleLogoClick}>
+            Home
+          </button>
           {!showLogout && (
             <button className="btn secondary small" onClick={() => navigate('/catalog')}>
               Browse courses
